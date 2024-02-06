@@ -1,0 +1,110 @@
+<footer>
+    <div class="bd-footer-area">
+        <div class="bd-gradient-bg"></div>
+        <div class="bd-footer pt-90 pb-25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="bd-footer-widget bd-footer-widget-1 mb-50">
+                            <div class="bd-footer-logo mb-35">
+                                <a routerLink="">
+                                    <img src="assets/img/BTH/logoo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="bd-footer-widget-content mb-40">
+                                <p>Toutes les épreuves du BAC tunisien et leurs corrigés</p>
+                            </div>
+                            <div class="bd-footer-bottom-social pb-20">
+                                <ul>
+                                    <li><a target="_blank" href="https://www.facebook.com/"><i
+                                                class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/"><i
+                                                class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                    <li><a target="_blank" href="https://www.youtube.com/"><i
+                                                class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="bd-footer-widget bd-footer-widget-2 mb-50">
+                            <div class="bd-footer-widget-content">
+                                <h4 class="bd-footer-widget-title mb-30">Liens rapides</h4>
+                                <div class="bd-footer-list">
+                                    <ul>
+                                        <li>
+                                            <a routerLink="">Accueil</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html">A propos</a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="bac">Le bac</a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="consignes">Consignes</a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="apresbac">Aprés le bac</a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="contact">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="bd-footer-widget bd-footer-widget-3 mb-50">
+                            <div class="bd-footer-widget-content">
+                                <h4 class="bd-footer-widget-title mb-30">Sections</h4>
+                                <div class="bd-footer-list">
+                                    <ul>
+                                        <li *ngFor="let section of sections"><a [routerLink]="'/section/' + section.id"
+                                                [innerHTML]="section.nom"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="bd-footer-widget bd-footer-widget-4">
+                            <div class="bd-footer-widget-content">
+                                <h4 class="bd-footer-widget-title mb-30">Contact Us</h4>
+                                <div class="bd-footer-contact">
+                                    <ul>
+                                        <li><i class="fa-light fa-location-dot"></i><a
+                                                href="https://maps.app.goo.gl/61EByj53Evm8ynmK8">Jemmel 5020, Monastir,
+                                                Tunisie</a></li>
+                                        <li><i class="fa-light fa-phone"></i><a href="tel:20838507">+216 208 385 07</a>
+                                        </li>
+                                        <li><i class="fa-light fa-envelope"></i><a
+                                                href="mailto:chaymafarhat16@gmail.com">chaymafarhat16&#64;gmail.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bd-footer-copyright pb-5">
+            <div class="bd-footer-copyright-line pb-20">
+                <img src="assets/img/shape/wave-line.png" alt="bottom line">
+            </div>
+            <div class="container">
+                <div class="bd-footer-copyright-wrap d-flex align-items-md-center justify-content-center">
+                    <div class="bd-footer-copyright-text pb-20">
+                        <p>Copyrighted by &copy;2023 <a href="https://chaymafarhat.netlify.app" rel="nofollow">Chayma
+                                Farhat</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

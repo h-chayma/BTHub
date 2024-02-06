@@ -1,0 +1,81 @@
+<main>
+    <section class="bd-breadcrumb-area p-relative fix theme-bg">
+        <div class="bd-breadcrumb-bg"></div>
+        <div class="bd-breadcrumb-wrapper mb-60 p-relative">
+            <div class="container">
+                <div class="bd-breadcrumb-shape d-none d-sm-block p-relative">
+                    <div class="bd-breadcrumb-shape-1">
+                        <img src="assets/img/shape/curved-line-2.png" alt="img not found!">
+                    </div>
+                    <div class="bd-breadcrumb-shape-2">
+                        <img src="assets/img/shape/white-curved-line.png" alt="img not found!">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                            <div class="bd-breadcrumb-content text-center">
+                                <h1 class="bd-breadcrumb-title" [innerHTML]="'Section ' + sectionDetails.data().nom"></h1>
+                                <div class="bd-breadcrumb-list">
+                                    <span><a routerLink=""><i class="flaticon-hut"></i>Accueil</a></span>
+                                    <span [innerHTML]="'Section ' + sectionDetails.data().nom"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bd-wave-wrapper bd-wave-wrapper-3">
+            <div class="bd-wave bd-wave-3"></div>
+            <div class="bd-wave bd-wave-3"></div>
+        </div>
+    </section>
+
+    <section class="bd-class-area pt-110">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bd-section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay=".2s">
+                        <h2 class="bd-section-title mb-0">Les Matiéres</h2>
+                        <p>Choissiez la matiére que vous voulez consulter ses épreuves</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <ng-container *ngIf="matieres && matieres.length > 0; else noMatieres">
+                    <div class="col-lg-4 mb-4" *ngFor="let item of matieres">
+                        <div class="bd-class-wrapper text-center wow fadeInUp" data-wow-duration="1s"
+                            data-wow-delay=".4s">
+                            <div class="bd-class-bg">
+                                <img src="assets/img/bg/bg-shape.jpg" alt="img not found!">
+                            </div>
+                            <div class="bd-class">
+                                <div class="bd-class-content">
+                                    <h3 class="bd-class-title"><a
+                                            [routerLink]="'/section/' + sectionId + '/matiere/' + item.id">{{item.nom}}</a>
+                                    </h3>
+                                    <div class="bd-class-btn">
+                                        <a [routerLink]="'/section/' + sectionId + '/matiere/' + item.id"
+                                            class="bd-btn bd-btn-grey">
+                                            <span class="bd-btn-inner">
+                                                <span class="bd-btn-normal">Consulter</span>
+                                                <span class="bd-btn-hover">Consulter</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-template #noMatieres>
+                    <div class="col-12 text-center">
+                        <p>Aucune matiére disponible pour cette section pour le moment</p>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </section>
+</main>

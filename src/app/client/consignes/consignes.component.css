@@ -1,0 +1,16 @@
+.bd-blog-quote {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.bd-blog-quote-content p {
+    font-size: 20px;
+}
+
+.bd-blog-quote-icon {
+    font-size: 50px;
+}
+
+.bd-breadcrumb-bg {
+    background-image: url('../../../assets/img/BTH/bg.png');
+}

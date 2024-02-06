@@ -1,0 +1,12 @@
+.bd-btn {
+    padding: 0 18px;
+    border-radius: 50%;
+}
+
+.blue{
+    background-color: #7C81FF;
+}
+
+.bd-breadcrumb-bg {
+    background-image: url('../../../assets/img/BTH/bg.png');
+}

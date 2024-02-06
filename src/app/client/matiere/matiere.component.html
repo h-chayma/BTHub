@@ -1,0 +1,110 @@
+<main>
+    <section class="bd-breadcrumb-area p-relative fix theme-bg">
+        <div class="bd-breadcrumb-bg"></div>
+        <div class="bd-breadcrumb-wrapper mb-60 p-relative">
+            <div class="container">
+                <div class="bd-breadcrumb-shape d-none d-sm-block p-relative">
+                    <div class="bd-breadcrumb-shape-1">
+                        <img src="assets/img/shape/curved-line-2.png" alt="img not found!">
+                    </div>
+                    <div class="bd-breadcrumb-shape-2">
+                        <img src="assets/img/shape/white-curved-line.png" alt="img not found!">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                            <div class="bd-breadcrumb-content text-center">
+                                <h1 class="bd-breadcrumb-title">Matiére {{matiereDetails.data().nom}}</h1>
+                                <div class="bd-breadcrumb-list">
+                                    <span><a routerLink=""><i class="flaticon-hut"></i>Accueil</a></span>
+                                    <span><a [routerLink]="'/section/' + sectionId">Section {{sectionDetails.data().nom}}</a></span>
+                                    <span>Matiére {{matiereDetails.data().nom}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bd-wave-wrapper bd-wave-wrapper-3">
+            <div class="bd-wave bd-wave-3"></div>
+            <div class="bd-wave bd-wave-3"></div>
+        </div>
+    </section>
+
+    <section class="bd-routine-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bd-section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay=".2s">
+                        <h2 class="bd-section-title mb-0">Epreuves</h2>
+                        <p>Vous veuillez choissez les epreuves que vous voullez de matiére {{matiereDetails.data().nom}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-area pb-100">
+                <div class="container">
+                    <div class="row wow fadeInUp" data-wow-delay=".3s">
+                        <div class="col-12">
+                            <form action="#">
+                                <div class="table-content table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr scope="row">
+                                                <th scope="col" rowspan="2">Année</th>
+                                                <th scope="col" colspan="2">Session Principale</th>
+                                                <th scope="col" colspan="2">Session Contrôle</th>
+                                            </tr>
+                                            <tr scope="row">
+                                                <th scope="col">Enoncé</th>
+                                                <th scope="col">Corrigé</th>
+                                                <th scope="col">Enoncé</th>
+                                                <th scope="col">Corrigé</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of epreuves">
+                                                <td>{{item.annee}}</td>
+                                                <td>
+                                                    <a *ngIf="item.enoncePr" href="{{item.enoncePr}}" class="bd-btn">
+                                                        <span class="bd-btn-inner">
+                                                            <i class="fa-regular fa-download"></i>
+                                                        </span>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a *ngIf="item.corrigePr" href="{{item.corrigePr}}" class="bd-btn">
+                                                        <span class="bd-btn-inner">
+                                                            <i class="fa-regular fa-download"></i>
+                                                        </span>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a *ngIf="item.enonceCon" href="{{item.enonceCon}}" class="bd-btn blue">
+                                                        <span class="bd-btn-inner">
+                                                            <i class="fa-regular fa-download"></i>
+                                                        </span>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a *ngIf="item.corrigeCon" href="{{item.corrigeCon}}" class="bd-btn blue">
+                                                        <span class="bd-btn-inner">
+                                                            <i class="fa-regular fa-download"></i>
+                                                        </span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

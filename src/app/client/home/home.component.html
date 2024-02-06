@@ -1,0 +1,97 @@
+<main>
+    <section class="bd-hero-area bd-hero-area-3 fix">
+        <div class="bd-gradient-bg"></div>
+        <div class="bd-hero-social-wrapper">
+            <div class="bd-hero-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i>facebook</a>
+            </div>
+            <div class="bd-hero-social">
+                <a href="#"><i class="fa-brands fa-twitter"></i>twitter</a>
+            </div>
+            <div class="bd-hero-social">
+                <a href="#"><i class="fa-brands fa-youtube"></i>youtube</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="bd-hero-inner-3">
+                <div class="bd-hero-shape-wrapper d-none d-lg-block">
+                    <div class="bd-hero-3-shape-2">
+                        <img src="assets/img/shape/curved-line-2.png" alt="Shape not found">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="bd-hero-content">
+                            <span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Your Ultimate Gateway
+                                to Baccalauréat Success</span>
+                            <h1 class="bd-hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                                <b style="color: #7C81FF;">B</b>ac <b style="color: #7C81FF;">T</b>unisia <b
+                                    style="color: #7C81FF;">H</b>ub
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div id="scene">
+                            <div class="bd-hero-thumb-3-wrapper p-relative z-index-1" data-depth=".4">
+                                <div class="bd-hero-thumb-3 p-relative">
+                                    <div class="bd-hero-thumb-3-mask">
+                                        <img src="assets/img/BTH/student.png" alt="img not found!">
+                                    </div>
+                                </div>
+                                <div class="bd-hero-thumb-3-shape d-none d-md-block">
+                                    <div class="bd-hero-thumb-3-shape-1 p-absolute">
+                                        <img src="assets/img/shape/home-3-shape-1.png" alt="img not found!">
+                                    </div>
+                                    <div class="bd-hero-thumb-3-shape-2 p-absolute">
+                                        <img src="assets/img/shape/home-3-shape-2.png" alt="img not found!">
+                                    </div>
+                                    <div class="bd-hero-thumb-3-shape-3 p-absolute">
+                                        <img src="assets/img/shape/home-3-shape-3.png" alt="img not found!">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bd-shop-cat-area pt-120 pb-90">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="bd-section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay=".2s">
+                        <h2 class="bd-section-title mb-0">Sections</h2>
+                        <p>Choisissez votre section qui convient le mieux à vos aspirations au sein de l'établissement
+                            éducatif.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <ng-container *ngIf="sections && sections.length > 0; else noSections">
+                    <div class="col-lg-3 col-md-6 col-6" *ngFor="let section of sections; let i = index">
+                        <div class="bd-shop-cat-wrap mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                            <a [routerLink]="'/section/' + section.id">
+                                <div class="bd-shop-cat">
+                                    <div class="bd-shop-cat-content">
+                                        <div class="bd-shop-cat-title " [ngClass]="'cat-' + (i % 4 + 1)">
+                                            <h4><i class="{{section.icon}}"></i></h4>
+                                        </div>
+                                        <span [innerHTML]="section.nom"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-template #noSections>
+                    <div class="col-12 text-center">
+                        <p>Aucune section disponible pour le moment</p>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </section>
+</main>
